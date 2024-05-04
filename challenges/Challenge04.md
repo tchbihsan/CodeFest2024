@@ -1,5 +1,5 @@
 List of Topics:
-Only 1 will be selected for actual event.
+- Only 1 will be selected for actual event.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *01:* AWS Web Application Architecture Challenge
