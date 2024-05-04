@@ -117,3 +117,68 @@ As AWS organization owner, you are tasked with automating routine tasks (commonl
 - How well does the solution address security and compliance requirements?
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*04:* AWS Automated Ticketing and Reporting System for AWS Inspector/Security Hub Findings
+
+*Problem Statement:*
+
+As part of your responsibilities as a cloud architect, you are tasked with designing an automated ticketing and reporting system for AWS Inspector/Security Hub findings. The system should assign a unique ticket number to each finding/event, associate it with the corresponding AWS account owner, and provide a reporting mechanism to track the status of each ticket. Additionally, notifications should be sent to account owners based on severity levels, and reminders should be scheduled to ensure timely closure of findings.
+
+*Requirements:*
+
+1. *Ticket Assignment:*
+   - Design a system to assign a unique ticket number to every AWS Inspector/Security Hub finding/event.
+   - Ensure that each ticket is associated with the corresponding AWS account owner.
+
+2. *Reporting System:*
+   - Implement a reporting mechanism to store the inventory of tickets along with their status (e.g., open, closed).
+   - Provide functionalities for querying and updating ticket status.
+
+3. *Notification System:*
+   - Introduce a notification mechanism to notify AWS account owners of their findings.
+   - Customize notifications based on severity levels and include instructions on how to close the findings.
+
+4. *Reminder Functionality:*
+   - Configure reminders to be sent to account owners based on severity levels with specified lead times.
+   - Ensure reminders prompt account owners to take action on findings before specified deadlines.
+
+*Evaluation Criteria:*
+
+- Is the system well-architected and scalable for managing AWS Inspector/Security Hub findings?
+- Are unique ticket numbers assigned to findings, and are they associated with the correct account owners?
+- Does the reporting mechanism provide accurate inventory of tickets and their statuses?
+- Are notifications and reminders configured effectively based on severity levels and lead times?
+- Have appropriate AWS services been utilized effectively in the solution?
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+*05:* AWS Event Management Web Application
+
+*Problem Statement:*
+
+You are tasked with designing a web application to help a company host an event attended by retailers across the US. The event will feature activities such as participant registration, attendance tracking, and a lucky draw at the end. The web app should facilitate event planning activities and provide features for attendees to register, provide personal information, specify food preferences, and receive notifications about the event agenda and lucky draw winners.
+
+*Requirements:*
+
+1. *Participant Registration:*
+   - Design a registration feature for participants to sign up for the event.
+   - Collect necessary information such as name, email, company name, and food preferences.
+
+2. *Event Agenda and Notifications:*
+   - Provide a feature to display the event agenda and send notifications to attendees about upcoming activities and announcements.
+   - Ensure notifications are delivered via email or SMS to registered participants.
+
+3. *Attendance Tracking:*
+   - Implement functionality to track attendee check-ins and confirmations during the event.
+   - Enable event organizers to view real-time attendance status and generate reports if necessary.
+
+4. *Lucky Draw:*
+   - Automate the selection of lucky draw winners based on the attendees list.
+   - Notify winners and display announcements of lucky draw results during the event.
+
+*Evaluation Criteria:*
+
+- Is the architecture well-structured and scalable for hosting the event management web application?
+- Are all required features, including participant registration, event agenda, attendance tracking, and lucky draw, implemented effectively?
+- Have appropriate AWS services been utilized effectively in the solution?
+- Are security measures implemented to protect participant data and ensure secure access to the application?
+- Is the solution designed to handle potential spikes in traffic and ensure high availability during the event?
+  
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
