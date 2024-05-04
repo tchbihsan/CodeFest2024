@@ -29,7 +29,63 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 3. BONUS:WIP
    `Full answer below. To remove some parts for participants to figure out themselves`
 
-```JSON
+```Terraform
+resource "aws_s3_bucket" "resource-name" {
+  bucket = "bucket-name"
+}
+
+resource "aws_s3_bucket_public_access_block" "resource-name" {
+  bucket = aws_s3_bucket.bucket-name.id
+  block_public_acls = false
+  block_public_policy = false
+  ignore_public_acls = false
+  restrict_public_buckets = false
+}
+
+resource "aws_s3_bucket_website_configuration" "resource-name" {
+  bucket = aws_s3_bucket.bucekt-name.id
+  index_document {
+    suffix = "index.html"
+  } 
+  error_document {
+    key = "error.html"
+  }
+  
+}
+
+resource "aws_s3_object" "resource-name" {
+  for_each = fileset("${path.module}/", "*.html")
+  bucket = aws_s3_bucket.bucket-name.id
+  key = each.value
+  source = "html/${each.value}"
+  content_type = "text/html"
+}
+
+resource "aws_s3_bucket_policy" "resource-name" {
+  bucket = aws_s3_bucket.bucket-name.id
+  policy = data.aws_iam_policy_document.s3_bucket_policy.json
+}
+
+data "aws_iam_policy_document" "s3_bucket_policy" {
+  statement {
+    actions = [
+      "s3:GetObject",
+      "s3:PutObject",
+      "s3:ListBucket",
+      "s3:DeleteObject",
+    ]
+    resources = [
+      var.bucket-arn,
+      "${var.bucket-arn}/*",
+    ]
+    principals {
+      type = "AWS"
+      identifiers = [
+        "*"
+      ]
+    }
+  }
+}
 
 }
 ```
