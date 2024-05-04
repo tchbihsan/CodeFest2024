@@ -47,7 +47,7 @@ resource "aws_s3_bucket_website_configuration" "resource-name" {
 }
 
 resource "aws_s3_object" "resource-name" {
-  for_each = fileset("${path.module}/", "*.html")
+  for_each = fileset("${path.module}/html", "*.html")
   bucket = aws_s3_bucket.bucket-name.id
   key = each.value
   source = "html/${each.value}"
