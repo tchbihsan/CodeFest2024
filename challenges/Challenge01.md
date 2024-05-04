@@ -36,7 +36,7 @@ resource "aws_s3_bucket_public_access_block" "resource-name" {
 }
 
 resource "aws_s3_bucket_website_configuration" "resource-name" {
-  bucket = aws_s3_bucket.bucekt-name.id
+  bucket = aws_s3_bucket.bucket-name.id
   index_document {
     suffix = "index.html"
   } 
