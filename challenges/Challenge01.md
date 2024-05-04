@@ -19,17 +19,6 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
   `Code will be inserted soon`
 
 ```Terraform
-
-```
-
-## Success Criteria
-
-1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources via Terraform.
-2. You have successfully created 1 DynamoDB and added some test data in you database via Terraform.
-3. BONUS:WIP
-   `Full answer below. To remove some parts for participants to figure out themselves`
-
-```Terraform
 resource "aws_s3_bucket" "resource-name" {
   bucket = "bucket-name"
 }
@@ -86,8 +75,20 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
     }
   }
 }
-
 }
+```
+
+## Success Criteria
+
+1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources via Terraform.
+2. You have successfully created 1 DynamoDB and added some test data in you database via Terraform.
+3. BONUS:WIP
+   `Full answer below. To remove some parts for participants to figure out themselves`
+
+```Terraform
+
+
+
 ```
 
 ## Learning Resources
