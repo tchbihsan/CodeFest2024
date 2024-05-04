@@ -18,7 +18,7 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Description
 
-* Using Terraform, you need to deploy 1 S3 bucket and 1 DynamoDB in the **us-east-2** region. 
+* You need to deploy 1 S3 bucket and 1 DynamoDB in the **us-east-2** region. 
   `Full code added for now. Will be updated before event.`
 
 ```Terraform code for S3
