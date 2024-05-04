@@ -83,6 +83,44 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 ```
 2. You need to deploy 1 DynamoDB and write some test data into the newly created database.
 
+  `Full code added for now. Will be updated before event.`
+   
+```Terraform code for S3
+resource "aws_dynamodb_table" "resource-name" {
+    name           = "resource-name"
+    billing_mode   = "PAY_PER_REQUEST"
+    hash_key       = "id"
+    range_key      = "range"
+    attribute {
+        name = "id"
+        type = "S"
+    }
+    attribute {
+        name = "range"
+        type = "S"
+    }
+    tags = {
+        Name = "resource-name"
+    }
+  
+}
+
+resource "aws_dynamodb_table_item" "example" {
+  table_name = aws_dynamodb_table.resource-name.name
+  hash_key   = aws_dynamodb_table.resource-name.hash_key
+
+  item = <<ITEM
+{
+  "exampleHashKey": {"S": "something"},
+  "one": {"N": "11111"},
+  "two": {"N": "22222"},
+  "three": {"N": "33333"},
+  "four": {"N": "44444"}
+}
+ITEM
+}
+
+```
    
 ## Success Criteria
 
