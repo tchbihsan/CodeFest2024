@@ -170,5 +170,7 @@ ITEM
 ## Learning Resources
 
 * [Overview of Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
+* [Overview of Amazon DynamoDB](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-rdbms-dynamodb/overview.html)
 * [Providers in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)
 * [Variables in Terraform](https://developer.hashicorp.com/terraform/language/values/variables)
+
