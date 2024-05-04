@@ -18,7 +18,7 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Description
 
-* You need to deploy 1 S3 bucket and 1 DynamoDB in the **us-east-2** region.
+1. You need to deploy 1 S3 bucket and create a directory to store the html files.
   
   `Full code added for now. Will be updated before event.`
 
@@ -81,7 +81,9 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 }
 }
 ```
+2. You need to deploy 1 DynamoDB and write some test data into the newly created database.
 
+   
 ## Success Criteria
 
 1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources via Terraform.
