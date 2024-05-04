@@ -1,6 +1,7 @@
 List of Topics:
 Only 1 will be selected for actual event.
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 *01:* AWS Web Application Architecture Challenge
 
 *Problem Statement:*
@@ -39,3 +40,6 @@ Your company aims to develop a scalable and resilient web application to provide
 - Security measures and compliance with security best practices.
 - Cost-effectiveness of the solution.
 - Clarity and completeness of documentation.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
