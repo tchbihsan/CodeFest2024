@@ -11,7 +11,7 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 ## Key Concepts
 
 - **Object storage service –** A service that manages data as object where each object contains data, metadata and a unique identifier.
-- **NoSQL database -** A database system that
+- **NoSQL database -** DB system that:
   - differs from the traditional relational database
   - designed to handle large volumes of unstructured or semi-structured data
   - added flexibility in data modeling. 
