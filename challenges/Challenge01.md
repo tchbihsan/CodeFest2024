@@ -8,6 +8,11 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
   - Amazon S3 is an object storage service that is widely used for storing images, videos, files, hosting static website and many more features!
   - DynamoDB is designed to handle large volumes of data and suitable for applications that require low-latency access to large datasets like mobile apps, gaming, IoT and real time analytics. 
 
+## Description
+
+1. You need to deploy one S3 bucket and create a directory to store the html files.
+2. You need to deploy one DynamoDB and write some test data into the newly created database.
+
 ## Key Concepts
 
 - **Object storage service –** A service that manages data as object where each object contains data, metadata and a unique identifier.
@@ -16,11 +21,8 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
   - designed to handle large volumes of unstructured or semi-structured data
   - added flexibility in data modeling
 
-## Description
+## Implementation
 
-1. You need to deploy one S3 bucket and create a directory to store the html files.
-  
-  `Full code added for now. Will be updated before event.`
 
 ```Terraform code for S3
 resource "aws_s3_bucket" "resource-name" {
