@@ -16,7 +16,7 @@ In this challenge, you will create a S3 bucket using Amazon S3. This AWS service
 
 ## Implementation
 
-Pre-req:
+Pre-req: (WIP)
 - Open Vs code
 - create tfe files by adding .tfe extension
 - optional : install terraform plugins (insert name)
