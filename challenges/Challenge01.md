@@ -136,5 +136,5 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 * [Overview of Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
 * [Providers in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)
 * [Variables in Terraform](https://developer.hashicorp.com/terraform/language/values/variables)
-* [What is Prinicipals in AWS?](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html
+* [What is Prinicipals in AWS?](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
 
