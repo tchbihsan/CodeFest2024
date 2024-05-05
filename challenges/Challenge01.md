@@ -31,7 +31,7 @@ Terraform:
    - s3:PutObject
    - s3:ListBucket
    - s3:DeleteObject
-3. Now, create the resource to upload the html files below into the s3 bucket. These files can be found in the /html directory.
+3. Now, create the resource to upload the html files below into the s3 bucket. These files can be found in the **html** directory.
    - index.html
    - error.html
 4. Proceed to disable the public access block in your s3 bucket.
