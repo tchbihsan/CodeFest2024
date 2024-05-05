@@ -23,8 +23,21 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Implementation
 
+Console:
+1. In a new browser tab, log in to the Amazon S3 console.
+2. Select 'us-east-2' as the region. This region will be used for all the upcoming challenges.
+      - You can see this at the very top of the page, next to your account name.
+4. Choose the orange Create bucket button.
+5. Under Bucket type, choose General purpose.
+6. Enter the bucket name.
+7. Under Block Public Access settings for this bucket, deselect the xx option.
+8. 
 
-```Terraform code for S3
+
+Terraform:
+`Full answer below. To remove some parts for participants to figure out themselves`
+
+```
 resource "aws_s3_bucket" "resource-name" {
   bucket = "bucket-name"
 }
