@@ -22,6 +22,7 @@ Pre-req:
 - optional : install terraform plugins (insert name)
 - tfe plan , tfe apply (short recap)
 - tfe providers and variables
+- iam policy in aws 
 
 Terraform:
 
