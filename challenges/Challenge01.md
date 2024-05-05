@@ -18,7 +18,7 @@ In this challenge, you will create a S3 bucket using Amazon S3. This AWS service
 
 Terraform:
 
-1. Create a s3 bucket resource via Terraform.
+1. Create a s3 bucket resource.
 2. Then, create s3 bucket policy that includes the permission below and attach it to the s3 bucket:
    - s3:GetObject
    - s3:PutObject
