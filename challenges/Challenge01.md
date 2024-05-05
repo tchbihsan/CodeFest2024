@@ -25,6 +25,19 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 Terraform:
 
+1. Create a s3 bucket resource via Terraform.
+2. Then, create s3 bucket policy that includes the permission below and attach it to the s3 bucket:
+   - s3:GetObject
+   - s3:PutObject
+   - s3:ListBucket
+   - s3:DeleteObject
+3. Now, create the resource to upload the html files below into the s3 bucket.
+   - index.html
+   - error.html
+4. Proceed to disable the public access block in your s3 bucket.
+5. Lastly, enable the static web hosting option for your s3 bucket.
+
+   
 `Full answer below. To remove some parts for participants to figure out themselves`
 
 ```
