@@ -24,6 +24,7 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 ## Implementation
 
 Terraform:
+
 `Full answer below. To remove some parts for participants to figure out themselves`
 
 ```
