@@ -24,7 +24,7 @@ Pre-req: (WIP)
 - tfe providers and variables
 - iam policy in aws 
 
-Terraform:
+Terraform for S3:
 
 1. Create a s3 bucket resource.
 2. Then, create s3 bucket policy that includes the permission below and attach it to the s3 bucket:
@@ -100,6 +100,55 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 }
 }
 ```
+
+Terraform for DynamoDB:
+
+1. Create a DynamoDB table.
+
+`Full answer below. To remove some parts for participants to figure out themselves`
+
+```
+resource "aws_dynamodb_table" "resource-name" {
+    name           = "resource-name"
+    billing_mode   = "PAY_PER_REQUEST"
+    hash_key       = "id"
+    range_key      = "range"
+    attribute {
+        name = "id"
+        type = "S"
+    }
+    attribute {
+        name = "range"
+        type = "S"
+    }
+    ttl {
+    attribute_name = "TimeToExist"
+    enabled        = false
+    }
+    tags = {
+        Name = "resource-name"
+    }
+  
+}
+
+resource "aws_dynamodb_table_item" "example" {
+  table_name = aws_dynamodb_table.resource-name.name
+  hash_key   = aws_dynamodb_table.resource-name.hash_key
+
+  item = <<ITEM
+{
+  "exampleHashKey": {"S": "something"},
+  "one": {"N": "11111"},
+  "two": {"N": "22222"},
+  "three": {"N": "33333"},
+  "four": {"N": "44444"}
+}
+ITEM
+}
+
+
+```
+
    
 ## Success Criteria
 
