@@ -169,7 +169,7 @@ ITEM
    `Full answer below. To remove some parts for participants to figure out themselves`
 
 ```
-Terraform for S3
+Bonus Challenge #1:
 
   KMS key:
 
@@ -192,7 +192,10 @@ Terraform for S3
 ```
 
 ```
-Terraform for DynamoDB
+Bonus Challenge #2:
+
+DynamoDB:
+
   ttl {
     attribute_name = "TimeToExist"
     enabled        = false
