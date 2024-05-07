@@ -4,15 +4,23 @@
 
 ## Introduction
 
-In this challenge, you will create a S3 bucket using Amazon S3. This AWS service is an object storage service that is widely used for storing images, videos, files, hosting static website and many more features!
+In this challenge, you will create a S3 bucket and a single NoSQL database using S3 and DynamoDB to create AWS resources that will be used in the upcoming challenges. 
+  - Amazon S3 is an object storage service that is widely used for storing images, videos, files, hosting static website and many more features!
+  - DynamoDB is designed to handle large volumes of data and suitable for applications that require low-latency access to large datasets like mobile apps, gaming, IoT and real-time analytics. 
+
 
 ## Description
 
 1. You need to deploy one S3 bucket and create a directory to store the html files.
+2. You need to deploy one DynamoDB and write some test data into the newly created database.
 
 ## Key Concepts
 
 - **Object storage service –** A service that manages data as object where each object contains data, metadata and a unique identifier.
+- **NoSQL database -** DB system that:
+  - differs from the traditional relational database
+  - designed to handle large volumes of unstructured or semi-structured data
+  - added flexibility in data modeling
 
 ## Implementation
 
@@ -152,13 +160,15 @@ ITEM
    
 ## Success Criteria
 
-1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources via Terraform.
-2. BONUS:
+1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources.
+2. You have successfully created 1 DynamoDB and added some test data in your database. 
+3. BONUS:
    - S3: Enable encryption for the bucket.
+   - DynamoDB: Add TTL and enable encryption using custom key to the database.
      
    `Full answer below. To remove some parts for participants to figure out themselves`
 
-```Terraform
+```Terraform for S3
 
   KMS key:
 
@@ -178,6 +188,19 @@ ITEM
       }
     }
   }
+```
+
+```Terraform for DynamoDB
+  ttl {
+    attribute_name = "TimeToExist"
+    enabled        = false
+  }
+
+  server_side_encryption {
+   enabled = true 
+   // true + key arn -> use custom key
+  }
+
 ```
 
 ## Learning Resources
