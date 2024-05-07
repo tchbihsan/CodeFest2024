@@ -168,7 +168,8 @@ ITEM
      
    `Full answer below. To remove some parts for participants to figure out themselves`
 
-```Terraform for S3
+```
+Terraform for S3
 
   KMS key:
 
@@ -190,7 +191,8 @@ ITEM
   }
 ```
 
-```Terraform for DynamoDB
+```
+Terraform for DynamoDB
   ttl {
     attribute_name = "TimeToExist"
     enabled        = false
@@ -206,6 +208,7 @@ ITEM
 ## Learning Resources
 
 * [Overview of Amazon S3](https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingBucket.html)
+* [Overview of Amazon DynamoDB](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-rdbms-dynamodb/overview.html)
 * [Providers in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)
 * [Variables in Terraform](https://developer.hashicorp.com/terraform/language/values/variables)
 * [What is Prinicipals in AWS?](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
