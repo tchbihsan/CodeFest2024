@@ -24,14 +24,6 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Implementation
 
-Pre-req: (WIP)
-- Open Vs code
-- create tfe files by adding .tfe extension
-- optional : install terraform plugins (insert name)
-- tfe plan , tfe apply (short recap)
-- tfe providers and variables
-- iam policy in aws 
-
 Terraform for S3:
 
 1. Create a s3 bucket resource.
