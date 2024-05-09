@@ -24,7 +24,7 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Implementation
 
-Terraform for S3:
+Try this via AWS Console:
 
 1. Create a s3 bucket resource.
 2. Then, create s3 bucket policy that includes the permission below and attach it to the s3 bucket:
@@ -32,11 +32,12 @@ Terraform for S3:
    - s3:PutObject
    - s3:ListBucket
    - s3:DeleteObject
-3. Now, create the resource to upload the html files below into the s3 bucket. These files can be found in the **html** directory.
+3. Next, create the resource to upload the html files below into the s3 bucket. These files can be found in the **html** directory.
    - index.html
    - error.html
 4. Proceed to disable the public access block in your s3 bucket.
 5. Lastly, enable the static web hosting option for your s3 bucket.
+6. Now, create another s3 bucket via Terraform instead.
 
    
 `Full answer below. To remove some parts for participants to figure out themselves`
@@ -206,5 +207,7 @@ DynamoDB:
 * [Overview of Amazon DynamoDB](https://docs.aws.amazon.com/prescriptive-guidance/latest/modernization-rdbms-dynamodb/overview.html)
 * [Providers in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest)
 * [Variables in Terraform](https://developer.hashicorp.com/terraform/language/values/variables)
+* [S3 in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket)
+* [DynamoDB in Terraform](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/dynamodb_table)
 * [What is Prinicipals in AWS?](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html)
 
