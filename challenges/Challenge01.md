@@ -102,9 +102,11 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
 }
 ```
 
-Terraform for DynamoDB:
+Try this via AWS Console:
 
 1. Create a DynamoDB table.
+2. Then, write some test data into the tabLE.
+3. Now, try this via Terraform instead.
 
 `Full answer below. To remove some parts for participants to figure out themselves`
 
