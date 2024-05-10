@@ -119,7 +119,7 @@ Try this via AWS Console:
 resource "aws_dynamodb_table" "codefest_table {
     name           = "codefest_table"
     read_capacity = 20
-    erite_capacity = 20
+    write_capacity = 20
     hash_key       = "Hash-Key"
 
     attribute {
