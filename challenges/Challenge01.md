@@ -85,6 +85,7 @@ resource "aws_s3_bucket_policy" "read_write" {
 
 data "aws_iam_policy_document" "coedfest_bucket_policy" {
   statement {
+    effect = "Allow"
     actions = [
       "s3:GetObject",
       "s3:PutObject",
@@ -108,43 +109,32 @@ data "aws_iam_policy_document" "coedfest_bucket_policy" {
 
 Try this via AWS Console:
 
-1. Create a DynamoDB table.
+1. Create a DynamoDB table and specify the partition key of the table.
 2. Then, write some test data into the table.
 3. Now, try this via Terraform instead.
 
 `Full answer below. To remove some parts for participants to figure out themselves`
 
 ```
-resource "aws_dynamodb_table" "resource-name" {
-    name           = "resource-name"
-    billing_mode   = "PAY_PER_REQUEST"
-    hash_key       = "id"
-    range_key      = "range"
+resource "aws_dynamodb_table" "codefest_table {
+    name           = "codefest_table"
+    read_capacity = 20
+    erite_capacity = 20
+    hash_key       = "Hash-Key"
+
     attribute {
-        name = "id"
+        name = "Hash-Key"
         type = "S"
     }
-    attribute {
-        name = "range"
-        type = "S"
-    }
-    ttl {
-    attribute_name = "TimeToExist"
-    enabled        = false
-    }
-    tags = {
-        Name = "resource-name"
-    }
-  
 }
 
-resource "aws_dynamodb_table_item" "example" {
-  table_name = aws_dynamodb_table.resource-name.name
-  hash_key   = aws_dynamodb_table.resource-name.hash_key
+resource "aws_dynamodb_table_item" "codefest_table_item" {
+  table_name = aws_dynamodb_table.codefest_table.name
+  hash_key   = aws_dynamodb_table.codefest_table.hash_key
 
   item = <<ITEM
 {
-  "exampleHashKey": {"S": "something"},
+  "Hash-Key": {"S": "something"},
   "one": {"N": "11111"},
   "two": {"N": "22222"},
   "three": {"N": "33333"},
