@@ -24,6 +24,10 @@ In this challenge, you will create a S3 bucket and a single NoSQL database using
 
 ## Implementation
 
+Note: 
+- The Terraform Plan/Apply workflow has been setup and you can look for the files at ./github/workflows directory.
+- The Terraform workflows are currently on dispatch mode - this mean, you would need to trigger it manually from Github Actions console.
+
 Try this via AWS Console:
 
 1. Create a s3 bucket resource.
@@ -43,20 +47,20 @@ Try this via AWS Console:
 `Full answer below. To remove some parts for participants to figure out themselves`
 
 ```
-resource "aws_s3_bucket" "resource-name" {
-  bucket = "bucket-name"
+resource "aws_s3_bucket" "xomcodefest_team0X" {
+  bucket = "xomcodefest_team0X"
 }
 
-resource "aws_s3_bucket_public_access_block" "resource-name" {
-  bucket = aws_s3_bucket.bucket-name.id
+resource "aws_s3_bucket_public_access_block" "public_access" {
+  bucket = aws_s3_bucket.xomcodefest_team0X.id
   block_public_acls = false
   block_public_policy = false
   ignore_public_acls = false
   restrict_public_buckets = false
 }
 
-resource "aws_s3_bucket_website_configuration" "resource-name" {
-  bucket = aws_s3_bucket.bucket-name.id
+resource "aws_s3_bucket_website_configuration" "static_hosting" {
+  bucket = aws_s3_bucket.xomcodefest_team0X.id
   index_document {
     suffix = "index.html"
   } 
@@ -66,20 +70,20 @@ resource "aws_s3_bucket_website_configuration" "resource-name" {
   
 }
 
-resource "aws_s3_object" "resource-name" {
+resource "aws_s3_object" "odefest_objects" {
   for_each = fileset("${path.module}/html", "*.html")
-  bucket = aws_s3_bucket.bucket-name.id
+  bucket = aws_s3_bucket.xomcodefest_team0X.id
   key = each.value
   source = "html/${each.value}"
   content_type = "text/html"
 }
 
-resource "aws_s3_bucket_policy" "resource-name" {
-  bucket = aws_s3_bucket.bucket-name.id
-  policy = data.aws_iam_policy_document.s3_bucket_policy.json
+resource "aws_s3_bucket_policy" "read_write" {
+  bucket = aws_s3_bucket.xomcodefest_team0X.id
+  policy = data.aws_iam_policy_document.codefest_bucket_policy.json
 }
 
-data "aws_iam_policy_document" "s3_bucket_policy" {
+data "aws_iam_policy_document" "coedfest_bucket_policy" {
   statement {
     actions = [
       "s3:GetObject",
@@ -88,8 +92,8 @@ data "aws_iam_policy_document" "s3_bucket_policy" {
       "s3:DeleteObject",
     ]
     resources = [
-      var.bucket-arn,
-      "${var.bucket-arn}/*",
+      var.xomcodefest_team0X-arn,
+      "${var.xomcodefest_team0X-arn}/*",
     ]
     principals {
       type = "AWS"
