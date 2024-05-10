@@ -70,7 +70,7 @@ resource "aws_s3_bucket_website_configuration" "static_hosting" {
   
 }
 
-resource "aws_s3_object" "odefest_objects" {
+resource "aws_s3_object" "codefest_objects" {
   for_each = fileset("${path.module}/html", "*.html")
   bucket = aws_s3_bucket.xomcodefest_team0X.id
   key = each.value
