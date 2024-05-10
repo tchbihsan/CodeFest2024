@@ -110,7 +110,7 @@ data "aws_iam_policy_document" "coedfest_bucket_policy" {
 Try this via AWS Console:
 
 1. Create a DynamoDB table and specify the partition key of the table.
-2. Then, write some test data into the table.
+2. Then, write some test data (items) into the table.
 3. Now, try this via Terraform instead.
 
 `Full answer below. To remove some parts for participants to figure out themselves`
@@ -149,8 +149,8 @@ ITEM
    
 ## Success Criteria
 
-1. You have successfully created a S3 bucket and attached a bucket policy to control access to your resources.
-2. You have successfully created 1 DynamoDB and added some test data in your database. 
+1. You are able to launch the static web from the S3 bucket from thom AWS Console.
+2. You are able to view the data (items) added in the AWS Console. 
 3. BONUS:
    - S3: Enable encryption for the bucket.
    - DynamoDB: Add TTL and enable encryption using custom key to the database.
