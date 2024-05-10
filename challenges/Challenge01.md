@@ -149,7 +149,7 @@ ITEM
    
 ## Success Criteria
 
-1. You are able to launch the static web from the S3 bucket from thom AWS Console.
+1. You are able to launch the static web from the S3 bucket in the AWS Console.
 2. You are able to view the data (items) added in the AWS Console. 
 3. BONUS:
    - S3: Enable encryption for the bucket.
